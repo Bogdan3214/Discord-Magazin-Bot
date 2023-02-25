@@ -1,9 +1,11 @@
 import discord
+import os
 
 client = discord.Client(intents=discord.Intents.all())
 
 duty_channel_id = 1078415029805776966
 presence_channel_id = 1078414693766549625
+token = os.environ['TOKEN']
 duty_timers = {}
 
 @client.event
@@ -52,4 +54,4 @@ async def on_message(msg):
         reply_message = '\n'.join([f'{username}: {time}' for username, time in duty_times.items()])
         await msg.channel.reply(f'Timpul petrecut in tura ta actuala:\n{reply_message}')
 
-client.run('MTA3ODAwNjE2NDg4MjczMTAxOA.G5A1NJ.-ZfFN6nmCtxr-uWRJ-GkDUrGK0jhjChspP6PY4')
+client.run(token)
