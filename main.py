@@ -54,4 +54,8 @@ async def on_message(msg):
         reply_message = '\n'.join([f'{username}: {time}' for username, time in duty_times.items()])
         await msg.channel.reply(f'Timpul petrecut in tura ta actuala:\n{reply_message}')
 
+<<<<<<< HEAD
 client.run(token)
+=======
+client.run(token)
+>>>>>>> 6251bebb3757bcd1e5d3f4e3c8445a27f4f03e7b
